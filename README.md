@@ -49,6 +49,8 @@ see data based on their authorizations.
 
 For more details of how to use Gaffer, see the User Guide.
 
+Linux [![Build Status](https://travis-ci.org/swrsen/Gaffer.svg?branch=master)](https://travis-ci.org/swrsen/Gaffer)
+
 Building
 --------
 

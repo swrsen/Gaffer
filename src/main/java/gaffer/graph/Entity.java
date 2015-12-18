@@ -86,12 +86,12 @@ public class Entity implements WritableComparable<Entity>, Serializable {
 	 * @param endDate  The end of the time period that the entity is summarising - must be non-null
 	 */
 	public Entity(String entityType,
-			String entityValue,
-			String summaryType,
-			String summarySubType,
-			String visibility,
-			Date startDate,
-			Date endDate) {
+		String entityValue,
+		String summaryType,
+		String summarySubType,
+		String visibility,
+		Date startDate,
+		Date endDate) {
 		// Validate arguments
 		validate(entityType, entityValue, summaryType, summarySubType, startDate, endDate);
 		// Set arguments
@@ -136,20 +136,20 @@ public class Entity implements WritableComparable<Entity>, Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((visibility == null) ? 0 : visibility.hashCode());
+		+ ((visibility == null) ? 0 : visibility.hashCode());
 		result = prime * result + ((endDate == null) ? 0 : endDate.hashCode());
 		result = prime * result
-				+ ((entityType == null) ? 0 : entityType.hashCode());
+		+ ((entityType == null) ? 0 : entityType.hashCode());
 		result = prime * result
-				+ ((entityValue == null) ? 0 : entityValue.hashCode());
+		+ ((entityValue == null) ? 0 : entityValue.hashCode());
 		result = prime
-				* result
-				+ ((summarySubType == null) ? 0 : summarySubType
-						.hashCode());
+		* result
+		+ ((summarySubType == null) ? 0 : summarySubType
+			.hashCode());
 		result = prime * result
-				+ ((summaryType == null) ? 0 : summaryType.hashCode());
+		+ ((summaryType == null) ? 0 : summaryType.hashCode());
 		result = prime * result
-				+ ((startDate == null) ? 0 : startDate.hashCode());
+		+ ((startDate == null) ? 0 : startDate.hashCode());
 		return result;
 	}
 
@@ -166,37 +166,37 @@ public class Entity implements WritableComparable<Entity>, Serializable {
 			if (other.visibility != null)
 				return false;
 		} else if (!visibility.equals(other.visibility))
-			return false;
+		return false;
 		if (endDate == null) {
 			if (other.endDate != null)
 				return false;
 		} else if (!endDate.equals(other.endDate))
-			return false;
+		return false;
 		if (entityType == null) {
 			if (other.entityType != null)
 				return false;
 		} else if (!entityType.equals(other.entityType))
-			return false;
-		if (entityValue == null) {
-			if (other.entityValue != null)
-				return false;
-		} else if (!entityValue.equals(other.entityValue))
-			return false;
+		return false;
 		if (summarySubType == null) {
 			if (other.summarySubType != null)
 				return false;
 		} else if (!summarySubType.equals(other.summarySubType))
-			return false;
+		return false;
+		if (entityValue == null) {
+			if (other.entityValue != null)
+				return false;
+		} else if (!entityValue.equals(other.entityValue))
+		return false;
 		if (summaryType == null) {
 			if (other.summaryType != null)
 				return false;
 		} else if (!summaryType.equals(other.summaryType))
-			return false;
+		return false;
 		if (startDate == null) {
 			if (other.startDate != null)
 				return false;
 		} else if (!startDate.equals(other.startDate))
-			return false;
+		return false;
 		return true;
 	}
 
@@ -223,10 +223,10 @@ public class Entity implements WritableComparable<Entity>, Serializable {
 	@Override
 	public String toString() {
 		return "Entity [entityType=" + entityType + ", entityValue="
-				+ entityValue + ", summaryType=" + summaryType
-				+ ", summarySubType=" + summarySubType
-				+ ", visibility=" + visibility + ", startDate="
-				+ UTC_FORMAT.format(startDate) + ", endDate=" + UTC_FORMAT.format(endDate) + "]";
+		+ entityValue + ", summaryType=" + summaryType
+		+ ", summarySubType=" + summarySubType
+		+ ", visibility=" + visibility + ", startDate="
+		+ UTC_FORMAT.format(startDate) + ", endDate=" + UTC_FORMAT.format(endDate) + "]";
 	}
 
 	public Entity clone() {
